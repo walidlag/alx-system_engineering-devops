@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Shows listening ports, encompassing listening sockets as well
+
+netstat -l --prg
