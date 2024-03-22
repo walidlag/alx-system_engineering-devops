@@ -1,7 +1,7 @@
 #!/usr/bin/puppet
-# Install Flask using Puppet
+# Install puppet-lint using Puppet
 
-package { 'flask':
+package { 'puppet-lint':
   ensure   => '2.1.0',
   provider => 'pip3',
 }
