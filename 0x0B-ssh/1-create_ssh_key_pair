@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Creates ssh key
 
-ssh-keygen -f school -b 4096 -t rsa
+ssh-keygen -f school -b 4096 -N betty -t rsa
