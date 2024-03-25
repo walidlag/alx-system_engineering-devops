@@ -14,9 +14,9 @@ ip=$2
 username=$3
 path_to_ssh_key=$4
 
-# checking the host key
 
-scp -o "StrictHostKeyChecking no" -i "$path_to_file" "$path_to_ssh_key" "$username@$ip:~/"
+# checking the host key
+scp -o "StrictHostKeyChecking no" -i "$path_to_ssh_key" "$path_to_file" "$username@$ip:~/"
 
 # Checking the success of the transfer
 if [ $? -eq 0 ]
