@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# login to the server-01
+
+eval $("ssh-agent")
+ssh-add ~/.ssh/school
+
+#IP Address white Username
+ssh ubuntu@100.25.177.242
