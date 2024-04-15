@@ -1,0 +1,46 @@
+         Title: Understanding the Journey: What Happens When You Type https://www.google.com in Your Browser and Press Enter
+When you press Enter after typing something into Google’s search bar, a series of events unfolds to process your request and display the results. Here’s a simplified breakdown of what happens?
+
+Dissecting the URL
+
+the web address is a sequence of characters identifying the location of a web resource on the internet
+
+The “google.com” part is known as the domain name
+
+The ".com" serves as the top-level domain (TLD), denoting the type of organization registered on the internet. Frequently used TLDs include ".com" for commercial entities, ".edu" for educational institutions, and ".gov" for governmental organizations.
+
+The "google" segment constitutes the second-level domain (SLD), representing the site's name.
+
+The "www" section is recognized as the subdomain, which directs users to specific pages within a website. For instance, typing images.google.com directs users to a page for searching images. "www" remains the most prevalent subdomain due to historical factors, but it's entirely feasible to create a domain without it
+
+Upon inputting the URL into our browser's address bar and hitting enter, an HTTP request is dispatched directly to the Google server. However, preceding this action, there's a crucial prerequisite. Computers accessing the internet rely on numerical designations known as IP addresses to pinpoint the location of the desired device. These addresses, unique to each machine, facilitate communication. While machines comprehend IP addresses, they do not comprehend names like "google.com," which primarily serve as aids for human memory. Therefore, a mechanism is essential to translate domain names to IP addresses, a task performed by Domain Name Systems (DNS).
+
+Internet Protocol version 4 (IPv4) addresses, a longstanding standard, utilize decimal notation, comprising four numbers separated by dots, such as 192.186.1.12. Conversely, IPv6 addresses, introduced to accommodate the escalating number of internet-connected devices, utilize 128 bits. The assignment of IP addresses falls under the jurisdiction of the Internet Corporation for Assigned Names and Numbers (ICANN).
+
+DNS servers undergo constant updates to incorporate new domain names and their corresponding IP addresses. Various types of DNS records exist for this purpose
+
+DNS Request:
+The journey begins with a Domain Name System (DNS) request. When you type "https://www.google.com" into your browser, it needs to find the IP address associated with the domain name "www.google.com". Your browser sends a DNS query to a DNS resolver, which then traverses the DNS hierarchy to find the IP address associated with the domain name
+Your browser asks the Domain Name System (DNS) to translate the domain name into an IP address, which is necessary to connect to the Google
+
+HTTPS/SSL:
+In our modern internet landscape, security is paramount. Hypertext Transfer Protocol Secure (HTTPS) encrypts the data exchanged between your browser and the web server using Secure Sockets Layer (SSL) or Transport Layer Security (TLS) protocols. This encryption protects your sensitive information from being intercepted by malicious actors
+The connection is secured with HTTPS, using protocols like Secure Sockets Layer (SSL) or Transport Layer Security (TLS) to encrypt the data exchange
+
+Once the IP address is obtained, our device (acting as the client) establishes a TCP connection with the server. Subsequently, the browser crafts an HTTP request, which is then dispatched to the server. This request comprises a request line, request headers, and, optionally, a request message body. It's worth noting that HTTP requests serve various purposes beyond fetching web pages. The request line encompasses a request method, and by employing different methods (such as GET, HEAD, PUT, POST, DELETE, etc.), a range of actions can be performed, including posting data to the server, requesting data storage, data deletion, and more. Typically, to retrieve a web page, a GET or HEAD method is utilized.
+
+Upon receiving this request, the server processes it and formulates an HTTP response, which, akin to the request, includes a response (status) line, headers, and an optional body. The response line carries a status code indicative of the request's outcome. Key status codes to familiarize oneself with include
+
+Load-Balancer:
+To ensure optimal performance and reliability, large websites like Google employ load balancers. These distribute incoming network traffic across multiple servers, preventing any single server from becoming overwhelmed and improving scalability and fault tolerance
+       Conclusion:
+The journey from typing "https://www.google.com" into your browser to seeing the Google homepage involves a complex orchestration of DNS resolution, TCP/IP communication, firewall traversal, HTTPS encryption, load balancing, web server processing, application logic execution, and database interactions. Understanding these underlying mechanisms can provide insight into the robust infrastructure that powers the modern web.
+In conclusion, the process of loading a webpage is a fascinating journey through various layers of the internet stack. By understanding the roles of DNS, TCP/IP, firewalls, HTTPS, load balancers, web servers, application servers, and databases, we gain a deeper appreciation for the complexity and reliability of the internet infrastructure that we often take for granted
+
+Google is estimated to handle approximately 63,000 requests every second. To manage this immense volume, they rely on thousands of potent servers operating incessantly. However, mere server abundance isn't sufficient. Efficient distribution of requests among these servers is imperative to prevent uneven workloads, ensuring optimal utilization of resources. This is where load balancers play a pivotal role.
+
+Load balancers are instrumental in distributing a system's workload, thereby enhancing reliability, efficiency, and availability. They can manifest as either hardware or software solutions.
+
+Software load balancers employ one or more scheduling algorithms to accomplish their objective. Among the most prevalent algorithms are
+
+Rendering the Page: Finally, the server sends the information back to your browser, which renders the page for you to view the search results
