@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 # Fixe the web server to run Nginx as the nginx user listenig
-# The cannot use apt-get remove
-# Fixes server bug
 chmod 644 /etc/nginx/nginx.conf
 sed -Ei 's/\s*#?\s*user .*/user nginx;/' /etc/nginx/nginx.conf
 sed -Ei 's/(listen (\[::\]:)?80) /\180 /' /etc/nginx/sites-enabled/default
-#If Apache is running, ensure to terminate its process to avoid any potential interference with Nginx
 pkill apache2
-# restart the nginx service
 su nginx -s /bin/bash -c 'service nginx restart'
