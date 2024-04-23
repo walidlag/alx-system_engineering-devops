@@ -18,9 +18,9 @@ if __name__ == "__main__":
     todos = requests.get(url + "todos", params).json()
 
     # Filter to count the employee
-    completed = [task.get("title") for task in todos if task.get("completed") is True]
+    completed = [task.get("title") for task in todos if task.get("completed")]
     print("Employee {} is done with tasks({}/{}):".format(
         user.get("name"), len(completed), len(todos)))
 
     # Print all completed tasks sequentially
-    [print("\t {}".format(complete)) for complete in completed]
+    [print("\t{}".format(complete)) for complete in completed]
