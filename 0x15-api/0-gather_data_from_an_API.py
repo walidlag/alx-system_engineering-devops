@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This script, using this REST API, to give employee ID,
-returns the information for a progress list.
+This script, using this REST API, for a given employee ID,
+returns information about his/her TODO list progress.
 """
 
 import requests
@@ -23,4 +23,5 @@ if __name__ == "__main__":
         user.get("name"), len(completed), len(todos)))
 
     # Print all completed tasks sequentially
-    [print("\t{}".format(complete)) for complete in completed]
+    for i, complete in enumerate(completed, start=1):
+        print("\t{}: {}".format(i, complete))
